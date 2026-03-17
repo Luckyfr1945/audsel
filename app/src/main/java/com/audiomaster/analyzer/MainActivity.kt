@@ -220,9 +220,6 @@ class MainActivity : AppCompatActivity() {
 
         modeText.setTextColor(activeColor)
         statusDot.setBackgroundColor(activeColor)
-        
-        // Update hero icon tint
-        findViewById<ImageView>(R.id.hero_icon).setColorFilter(activeColor)
     }
 
     private fun extractJson(output: String): JSONObject? {

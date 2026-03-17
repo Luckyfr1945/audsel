@@ -6,7 +6,9 @@
 
     <application
         android:allowBackup="true"
-        android:label="Audio Master"
+        android:icon="@drawable/hero_logo"
+        android:roundIcon="@drawable/hero_logo"
+        android:label="AudSel"
         android:supportsRtl="true"
         android:theme="@style/Theme.AudioMaster">
         <activity
