@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Master - Industrial UI Preview</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --card-bg: #1a1a1a;
+            --text-main: #e0e0e0;
+            --text-dim: #888888;
+            --accent: #ffffff;
+            --border: #333333;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .phone-container {
+            width: 360px;
+            height: 740px;
+            background-color: var(--bg-color);
+            border-radius: 40px;
+            border: 8px solid #222;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .status-bar {
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 25px 0;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        header {
+            padding: 20px 25px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .main-display {
+            padding: 40px 25px;
+            text-align: center;
+        }
+
+        .khz-value {
+            font-size: 84px;
+            font-weight: 200;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .khz-label {
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--text-dim);
+            margin-top: 5px;
+            letter-spacing: 4px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; gap: 15px; padding: 0 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card-full { grid-column: span 2; }
+
+        .card-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-value { font-size: 18px; font-weight: 500; }
+
+        .card-sub { font-size: 12px; color: var(--text-dim); }
+
+        .footer-nav {
+            margin-top: auto;
+            height: 80px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-dim);
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .nav-item.active { color: var(--accent); }
+
+        .icon-circle { width: 8px; height: 8px; background: currentColor; border-radius: 50%; }
+
+        .root-badge {
+            position: absolute; top: 50px; right: 25px;
+            font-size: 10px; color: #4CAF50; border: 1px solid #4CAF50;
+            padding: 2px 6px; border-radius: 4px; font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-container">
+        <div class="status-bar"><span>23:32</span><span>LTE / 90%</span></div>
+        <div class="root-badge">ROOT ACTIVE</div>
+        <header><h1>Audio Master</h1></header>
+        <section class="main-display">
+            <p class="khz-value">192</p>
+            <p class="khz-label">KHZ</p>
+        </section>
+        <div class="grid">
+            <div class="card">
+                <span class="card-title">Buffer Size</span>
+                <span class="card-value">128 frames</span>
+                <span class="card-sub">5.0ms Latency</span>
+            </div>
+            <div class="card">
+                <span class="card-title">Resampler</span>
+                <span class="card-value">Neutral</span>
+                <span class="card-sub">Bit-Perfect</span>
+            </div>
+            <div class="card card-full">
+                <span class="card-title">Output Device</span>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <span class="card-value">USB DAC Connected</span>
+                        <div class="card-sub">FiiO K5 Pro</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="footer-nav">
+            <div class="nav-item active"><div class="icon-circle"></div><span>Analyze</span></div>
+            <div class="nav-item">
+                <div class="icon-circle" style="background: transparent; border: 1.5px solid #888;"></div>
+                <span>Output</span>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+# Android Gradle
+.gradle/
+build/
+app/build/
+captures/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log Files
+*.log
+
+# Android Studio
+.idea/
+*.iml
+*.iws
+.DS_Store
+
+# Java
+*.class
+
+# Generated files
+/bin/
+/gen/
+/out/
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs
+hs_err_pid*
