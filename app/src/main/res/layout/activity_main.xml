@@ -29,7 +29,7 @@
             android:background="@color/bg_elevated"
             android:paddingHorizontal="10dp"
             android:paddingVertical="4dp"
-            android:text="v2.0"
+            android:text="v3.1"
             android:textColor="@color/blue"
             android:textSize="11sp"
             android:textStyle="bold" />
@@ -97,7 +97,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="AudSel Pro"
+                                android:text="AudSel Extreme"
                                 android:textColor="@color/text_primary"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
@@ -128,7 +128,7 @@
                             android:id="@+id/status_dot"
                             android:layout_width="8dp"
                             android:layout_height="8dp"
-                            android:background="@drawable/card_bg" />
+                            android:background="@drawable/dot_active" />
 
                         <TextView
                             android:layout_width="wrap_content"
